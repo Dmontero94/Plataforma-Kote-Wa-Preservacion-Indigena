@@ -24,8 +24,8 @@ Crear un ecosistema digital robusto que facilite la **Educación Intercultural B
 
 | Rol Principal | Miembro del Equipo | Contacto (Sugerido) |
 | :--- | :--- | :--- |
-| Líder Técnico / Arquitecto | Daniela | dmonteromo@ucenfotec.ac.cr |
-| Scrum Master / Facilitador | Wilmer | wpaizmolina@ucenfotec.ac.cr |
+| Líder Técnico / Arquitecto | Daniela Montero | dmonteromo@ucenfotec.ac.cr |
+| Scrum Master / Facilitador | Wilmer Paiz | wpaizm@ucenfotec.ac.cr |
 
 ---
 
