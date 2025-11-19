@@ -39,7 +39,7 @@ Para mantener la consistencia y la legibilidad en el código, seguiremos las sig
 | :--- | :--- | :--- |
 | **Variables/Funciones** | `camelCase` | `obtenerContenidosCulturales` |
 | **Clases/Componentes** | `PascalCase` | `ModuloAprendizaje` |
-| **Archivos/Módulos** | `kebab-case` | `lider-comunitario.js` |
+| **Archivos/Módulos** | `kebab-case` | `index.js` |
 | **Indentación** | 2 espacios (Soft Tabs) | (Definido en archivo `.editorconfig`) |
 
 ### 2. Estrategia de Branches y Flujo de Trabajo (Git Flow Simplificado)
