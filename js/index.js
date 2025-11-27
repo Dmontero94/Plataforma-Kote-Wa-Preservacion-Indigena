@@ -140,7 +140,7 @@ function validate() {
 function registrar() {
     const validacion = validate();
     if (validacion) {
-        const libro = {
+        const student = {
             "name": inputName.value.trim(),
             "email": inputEmail.value.trim(),
             "language": inputLanguage.value.trim(),
@@ -149,15 +149,22 @@ function registrar() {
          //Fetch
 
         fetch("http://localhost:3000/api/register-student",{
-            method: "post",
+            method: "POST",
             headers:{
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify(libro)
+            body: JSON.stringify(student)
 
         })
-        .then(res => res.json())
+        .then(res => {
+            console.log("Estado de respuesta:", res.status);
+            if (!res.ok) {
+                throw new Error(`Error HTTP: ${res.status}`);
+            }
+            return res.json();
+        })
         .then(data=>{
+            console.log("Respuesta del servidor:", data);
             Swal.fire({
                 'icon' : "success",
                 'title': "Operación exitosa",
@@ -165,10 +172,11 @@ function registrar() {
             });
         })
         .catch(error =>{
+            console.error("Error en la solicitud:", error);
             Swal.fire({
                 'icon' : "error",
                 'title': "Operación fallida",
-                'text' : "El Estudiante no se pudo registrar, revise los campos resaltados"
+                'text' : error.message || "El Estudiante no se pudo registrar, revise los campos resaltados"
             });
         });
     }
@@ -181,5 +189,6 @@ if (btnRegistrar) {
 document.addEventListener("DOMContentLoaded", () => {
   renderLenguas();
   setupNavbar();
-  setupFormValidation();
+  validate();
+  registrar();
 });
