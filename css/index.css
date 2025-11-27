@@ -159,12 +159,16 @@ body {
 .card__image-wrapper {
   height: 160px;
   overflow: hidden;
+  background: rgba(34, 197, 94, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .card__image {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .card__body {
@@ -252,6 +256,20 @@ body {
   filter: brightness(1.05);
 }
 
+.btn--secondary {
+  background: rgba(34, 197, 94, 0.2);
+  color: var(--color-primary);
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--color-primary);
+  transition: all 0.2s ease;
+}
+
+.btn--secondary:hover {
+  background: var(--color-primary);
+  color: #022c22;
+}
+
 /* ===== FOOTER ===== */
 .footer {
     background: rgba(2, 6, 23, 0.9); /* Fondo oscuro suave */
@@ -321,4 +339,92 @@ body {
   .navbar__menu--open {
     display: flex;
   }
+}
+
+/* ===== MODAL ===== */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 100;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal--open {
+  display: flex !important;
+}
+
+.modal__content {
+  background: var(--color-bg-soft);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  max-width: 600px;
+  width: 90%;
+  border: 1px solid rgba(148, 163, 184, 0.28);
+  box-shadow: var(--shadow-soft);
+  position: relative;
+}
+
+.modal__close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  color: var(--color-text);
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s ease;
+}
+
+.modal__close:hover {
+  color: var(--color-primary);
+}
+
+.modal__title {
+  color: var(--color-primary);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+}
+
+.modal__region {
+  margin-bottom: 1rem;
+}
+
+.modal__region strong {
+  color: var(--color-primary);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.modal__region p {
+  color: var(--color-muted);
+  margin: 0;
+}
+
+.modal__description {
+  margin-bottom: 1rem;
+}
+
+.modal__description strong {
+  color: var(--color-primary);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.modal__description p {
+  color: var(--color-muted);
+  margin: 0;
 }
