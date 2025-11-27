@@ -272,7 +272,7 @@ body {
 
 /* ===== FOOTER ===== */
 .footer {
-    background: rgba(2, 6, 23, 0.9); /* Fondo oscuro suave */
+    background: rgba(2, 6, 23, 0.9); 
     border-top: 1px solid rgba(148, 163, 184, 0.2);
     padding: 2rem 1rem;
     margin-top: 3rem;
@@ -281,7 +281,7 @@ body {
 .footer-content {
     max-width: 1100px;
     margin: 0 auto;
-    text-align: center;
+    text-align: end;
 }
 
 .footer h4 {
