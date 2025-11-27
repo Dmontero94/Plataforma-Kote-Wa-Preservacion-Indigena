@@ -95,6 +95,22 @@
   </div>
 </section>
 
+<!-- MODAL PARA VER DETALLES DE LENGUAS -->
+<div id="modal-lengua" class="modal">
+  <div class="modal__content">
+    <button class="modal__close" onclick="closeModal()">&times;</button>
+    <h2 id="modal-titulo" class="modal__title"></h2>
+    <div class="modal__region">
+      <strong>Región:</strong>
+      <p id="modal-region"></p>
+    </div>
+    <div class="modal__description">
+      <strong>Descripción:</strong>
+      <p id="modal-descripcion"></p>
+    </div>
+  </div>
+</div>
+
 <!-- FOOTER -->
 <footer class="footer">
     <div class="footer-content">
@@ -112,6 +128,18 @@
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="js/index.js"></script>
+
+<script>
+  // Cerrar modal al hacer clic fuera del contenido
+  const modal = document.getElementById('modal-lengua');
+  if (modal) {
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        closeModal();
+      }
+    });
+  }
+</script>
 
 </body>
 </html>
