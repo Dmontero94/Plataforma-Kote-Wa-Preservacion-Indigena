@@ -73,16 +73,45 @@ function renderLenguas() {
             onerror="this.src='https://images.pexels.com/photos/4606720/pexels-photo-4606720.jpeg?auto=compress&cs=tinysrgb&w=800';">
         </div>
         <div class="card__body">
-          <div class="card__tag">${lengua.region}</div>
           <h3 class="card__title">${lengua.nombre}</h3>
-          <p class="card__description">
-            ${lengua.descripcion}
-          </p>
+          <button class="btn btn--secondary" data-lengua-id="${lengua.id}">Ver más</button>
         </div>
       </article>
     `
     )
     .join("");
+
+  // Agregar event listeners a los botones "Ver más"
+  document.querySelectorAll(".btn--secondary").forEach(btn => {
+    btn.addEventListener("click", (e) => {
+      const lenguaId = e.target.getAttribute("data-lengua-id");
+      const lengua = lenguasIndigenas.find(l => l.id === lenguaId);
+      if (lengua) {
+        openModal(lengua);
+      }
+    });
+  });
+}
+
+function openModal(lengua) {
+  const modal = document.getElementById("modal-lengua");
+  const modalTitle = document.getElementById("modal-titulo");
+  const modalRegion = document.getElementById("modal-region");
+  const modalDescripcion = document.getElementById("modal-descripcion");
+  
+  if (modal && modalTitle && modalRegion && modalDescripcion) {
+    modalTitle.textContent = lengua.nombre;
+    modalRegion.textContent = lengua.region;
+    modalDescripcion.textContent = lengua.descripcion;
+    modal.classList.add("modal--open");
+  }
+}
+
+function closeModal() {
+  const modal = document.getElementById("modal-lengua");
+  if (modal) {
+    modal.classList.remove("modal--open");
+  }
 }
 
 function setupNavbar() {
@@ -157,14 +186,12 @@ function registrar() {
 
         })
         .then(res => {
-            console.log("Estado de respuesta:", res.status);
             if (!res.ok) {
                 throw new Error(`Error HTTP: ${res.status}`);
             }
             return res.json();
         })
         .then(data=>{
-            console.log("Respuesta del servidor:", data);
             Swal.fire({
                 'icon' : "success",
                 'title': "Operación exitosa",
@@ -172,7 +199,6 @@ function registrar() {
             });
         })
         .catch(error =>{
-            console.error("Error en la solicitud:", error);
             Swal.fire({
                 'icon' : "error",
                 'title': "Operación fallida",
