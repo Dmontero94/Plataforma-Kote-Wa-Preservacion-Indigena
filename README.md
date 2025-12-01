@@ -14,7 +14,7 @@ Crear un ecosistema digital robusto que facilite la **Educación Intercultural B
 
 | Categoría | Tecnología | Razón de Uso |
 | :--- | :--- | :--- |
-| **Backend/API** | Node.js / JavaScript | Escalabilidad y facilidad de desarrollo de API REST. |
+| **Backend/API** |JavaScript | Escalabilidad y facilidad de desarrollo de API REST. |
 | **Frontend** | HTML / CSS | Interfaz de usuario dinámica y modular para los módulos de aprendizaje interactivo. |
 | **Base de Datos** | MongoDB | Ideal para almacenar datos relacionales (usuarios) y no relacionales (recursos multimedia categorizados). |
 
