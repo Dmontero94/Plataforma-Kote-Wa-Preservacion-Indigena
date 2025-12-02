@@ -101,3 +101,13 @@ PORT=3000
 4. Ejecutar servidor
 
 * node server.js
+
+### 👤 Usuarios
+
+| Método | Ruta | Descripción |
+| :--- | :--- | :--- |
+| POST | `/registrar-usuario` | Registrar usuario |
+| GET  | `/listar-usuarios` | Listar todos los usuarios |
+| GET  | `/buscar-usuarios/:correo` | Buscar usuario por correo |
+| PUT  | `/actualizar-usuario/:id` | Actualizar usuario |
+| DELETE | `/eliminar-usuario/:id` | Eliminar usuario |
