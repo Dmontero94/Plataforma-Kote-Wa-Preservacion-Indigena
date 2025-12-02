@@ -131,3 +131,10 @@ PORT=3000
 | GET  | `/get-student/:email` | Buscar estudiante por correo |
 | PUT  | `/update-student/:id` | Actualizar estudiante |
 | DELETE | `/delete-student/:id` | Eliminar estudiante |
+
+
+## 🔐 Variables de Entorno
+
+Crear un archivo **`.env`** con:
+MONGO_URI=tu_url_de_mongodb
+PORT=3000
