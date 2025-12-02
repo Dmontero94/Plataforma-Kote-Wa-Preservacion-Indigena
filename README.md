@@ -72,3 +72,32 @@ Los mensajes de commit deben ser informativos y seguir la convención **`<tipo>(
 ---
 
 ## 📂 Estructura del Repositorio
+
+
+## 🔧 Instalación y Configuración
+
+### Requisitos previos
+
+* Node.js v18 o superior  
+* MongoDB local o MongoDB Atlas  
+* NPM
+
+### Pasos para la instalación
+
+1. Clonar el repositorio
+
+* git clone https://github.com/usuario/kote-wa.git
+* cd back-end
+
+2. Instalar dependencias
+
+* npm install
+
+3. Configurar archivo .env
+
+* MONGO_URI=tu_url_de_mongodb
+PORT=3000
+
+4. Ejecutar servidor
+
+* node server.js
