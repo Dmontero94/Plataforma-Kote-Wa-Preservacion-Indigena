@@ -111,3 +111,13 @@ PORT=3000
 | GET  | `/buscar-usuarios/:correo` | Buscar usuario por correo |
 | PUT  | `/actualizar-usuario/:id` | Actualizar usuario |
 | DELETE | `/eliminar-usuario/:id` | Eliminar usuario |
+
+### 📚 Libros
+
+| Método | Ruta | Descripción |
+| :--- | :--- | :--- |
+| POST | `/registrar-libro` | Registrar libro |
+| GET  | `/listar-libros` | Listar libros |
+| GET  | `/buscar-libro/:isbn` | Buscar libro por ISBN |
+| PUT  | `/actualizar-libro/:id` | Actualizar libro |
+| DELETE | `/eliminar-libro/:id` | Eliminar libro |
