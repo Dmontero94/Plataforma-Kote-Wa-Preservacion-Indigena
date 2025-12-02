@@ -138,3 +138,7 @@ PORT=3000
 Crear un archivo **`.env`** con:
 MONGO_URI=tu_url_de_mongodb
 PORT=3000
+
+## 📄 Licencia
+
+Este proyecto se rige bajo la licencia **ISC**.
