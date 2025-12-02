@@ -121,3 +121,13 @@ PORT=3000
 | GET  | `/buscar-libro/:isbn` | Buscar libro por ISBN |
 | PUT  | `/actualizar-libro/:id` | Actualizar libro |
 | DELETE | `/eliminar-libro/:id` | Eliminar libro |
+
+### 🧑‍🎓 Estudiantes
+
+| Método | Ruta | Descripción |
+| :--- | :--- | :--- |
+| POST | `/register-student` | Registrar estudiante |
+| GET  | `/list-students` | Listar todos los estudiantes |
+| GET  | `/get-student/:email` | Buscar estudiante por correo |
+| PUT  | `/update-student/:id` | Actualizar estudiante |
+| DELETE | `/delete-student/:id` | Eliminar estudiante |
