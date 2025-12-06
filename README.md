@@ -132,6 +132,15 @@ PORT=3000
 | PUT  | `/update-student/:id` | Actualizar estudiante |
 | DELETE | `/delete-student/:id` | Eliminar estudiante |
 
+## 📦 Dependencias del Proyecto
+
+Estas dependencias se instalan automáticamente con `npm install`:
+
+- express
+- mongoose
+- cors
+- dotenv
+- body-parser
 
 ## 🔐 Variables de Entorno
 
