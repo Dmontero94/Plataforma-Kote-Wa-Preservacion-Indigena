@@ -102,6 +102,16 @@ PORT=3000
 
 * node server.js
 
+## 📦 Dependencias del Proyecto
+
+Estas dependencias se instalan automáticamente con `npm install`:
+
+- express
+- mongoose
+- cors
+- dotenv
+- body-parser
+
 ### 👤 Usuarios
 
 | Método | Ruta | Descripción |
@@ -131,16 +141,6 @@ PORT=3000
 | GET  | `/get-student/:email` | Buscar estudiante por correo |
 | PUT  | `/update-student/:id` | Actualizar estudiante |
 | DELETE | `/delete-student/:id` | Eliminar estudiante |
-
-## 📦 Dependencias del Proyecto
-
-Estas dependencias se instalan automáticamente con `npm install`:
-
-- express
-- mongoose
-- cors
-- dotenv
-- body-parser
 
 ## 🔐 Variables de Entorno
 
