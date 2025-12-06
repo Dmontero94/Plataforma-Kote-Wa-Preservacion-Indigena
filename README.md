@@ -104,13 +104,15 @@ PORT=3000
 
 ## 📦 Dependencias del Proyecto
 
-Estas dependencias se instalan automáticamente con `npm install`:
+Este backend utiliza las siguientes dependencias (instaladas con `npm install`):
 
-- express
-- mongoose
-- cors
-- dotenv
-- body-parser
+| Paquete | Descripción |
+| :--- | :--- |
+| express | Servidor y manejo de rutas |
+| mongoose | Conexión y modelado con MongoDB |
+| cors | Permite solicitudes entre dominios |
+| dotenv | Manejo de variables de entorno |
+| body-parser | Procesa cuerpos JSON de las peticiones |
 
 ### 👤 Usuarios
 
